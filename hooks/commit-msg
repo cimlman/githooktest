@@ -1,0 +1,10 @@
+#!/bin/sh
+
+MESSAGE_FIRST_LINE=$(cat "$1" | sed 's/#.*$//;/^[[:blank:]]*$/d' | head -n 1)
+REGEX='^BANKAPIDEV-[1-9][0-9]* .*$'
+
+if ! expr "${MESSAGE_FIRST_LINE}" : "${REGEX}" >/dev/null; then
+  echo "Commit message '${MESSAGE_FIRST_LINE}' must match '${REGEX}'" >&2
+  exit 1
+fi
+
