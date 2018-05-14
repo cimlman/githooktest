@@ -5,7 +5,7 @@
     <groupId>cz.jaroslavciml</groupId>
     <artifactId>githooktest</artifactId>
     <packaging>jar</packaging>
-    <version>18.10-SNAPSHOT</version>
+    <version>18.08</version>
     <name>PoC Git Hooks</name>
 
     <properties>
